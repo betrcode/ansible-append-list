@@ -1,0 +1,21 @@
+---
+
+- name: Initialize an empty list for our strings
+  set_fact:
+    my_strings: []
+
+- name: Setup a string variable
+  set_fact:
+    my_name: "Max"
+
+- name: Append string to list
+  set_fact:
+    my_strings: "{{ my_strings }} + [ '{{ my_name }}' ]"
+
+- debug: var=my_strings
+
+- name: Append another item to the list
+  set_fact:
+    my_strings: "{{ my_strings }} + [ 'Power' ]"
+
+- debug: var=my_strings

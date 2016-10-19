@@ -1,0 +1,21 @@
+---
+
+- name: Initialize an empty list
+  set_fact:
+    the_list: []
+
+- name: Setup a integer variable
+  set_fact:
+    my_int: 5
+
+- name: Append item to list
+  set_fact:
+    the_list: "{{ the_list }} + [ {{ my_int }} ]"
+
+- debug: var=the_list
+
+- name: Append another item to the list
+  set_fact:
+    the_list: "{{ the_list }} + [ 6 ]"
+
+- debug: var=the_list

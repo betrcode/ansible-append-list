@@ -1,0 +1,23 @@
+---
+
+- debug: msg="Append/merge list of maps to list"
+
+- name: Setup two lists to be merged
+  set_fact:
+    list_one:
+      - first_name: John
+        last_name: Doe
+      - first_name: Jane
+        last_name: Doe
+    list_two:
+      - first_name: Douglas
+        last_name: Adams
+      - first_name: Frederic
+        last_name: Bastiat
+
+- name: Merge the two lists of maps
+  set_fact:
+    lists_merged: "{{ list_one }} + {{ list_two }}"
+
+- name: Demonstrate merged lists
+  debug: var=lists_merged

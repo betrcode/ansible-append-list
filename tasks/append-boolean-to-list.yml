@@ -1,0 +1,21 @@
+---
+
+- name: Initialize an empty list for our truths
+  set_fact:
+    my_thruths: []
+
+- name: Setup a boolean variable
+  set_fact:
+    my_truth: True
+
+- name: Append boolean to list
+  set_fact:
+    my_thruths: "{{ my_thruths }} + [ {{ my_truth }} ]"
+
+- debug: var=my_thruths
+
+- name: Append another boolean to the list
+  set_fact:
+    my_thruths: "{{ my_thruths }} + [ False ]"
+
+- debug: var=my_thruths

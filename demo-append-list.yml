@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - include: tasks/append-list-to-list.yml
+    - include: tasks/append-list-of-map-to-list.yml
+    - include: tasks/append-integer-to-list.yml
+    - include: tasks/append-boolean-to-list.yml
+    - include: tasks/append-string-to-list.yml
