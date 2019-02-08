@@ -164,3 +164,6 @@ localhost                  : ok=27   changed=0    unreachable=0    failed=0
 
 ```
 
+## Ansible version
+
+Demo built with Ansible version 2.6.5
