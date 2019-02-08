@@ -10,12 +10,12 @@
 
 - name: Append string to list
   set_fact:
-    my_strings: "{{ my_strings }} + [ '{{ my_name }}' ]"
+    my_strings: "{{ my_strings + [ my_name ] }}"
 
 - debug: var=my_strings
 
 - name: Append another item to the list
   set_fact:
-    my_strings: "{{ my_strings }} + [ 'Power' ]"
+    my_strings: "{{ my_strings  + [ 'Power' ] }}"
 
 - debug: var=my_strings
