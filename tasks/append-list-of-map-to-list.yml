@@ -15,6 +15,10 @@
       - first_name: Frederic
         last_name: Bastiat
 
+- debug: var=list_one
+
+- debug: var=list_two
+
 - name: Merge the two lists of maps
   set_fact:
     lists_merged: "{{ list_one }} + {{ list_two }}"
