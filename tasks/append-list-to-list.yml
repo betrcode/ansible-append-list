@@ -13,9 +13,13 @@
       - 5
       - 6
 
+- debug: var=list_one
+
+- debug: var=list_two
+
 - name: Merge the two lists
   set_fact:
-    lists_merged: "{{ list_one }} + {{ list_two }}"
+    lists_merged: "{{ list_one + list_two }}"
 
 - name: Demonstrate merged lists
   debug: var=lists_merged
