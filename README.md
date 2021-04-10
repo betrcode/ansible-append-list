@@ -5,8 +5,14 @@ In this repository you can find examples of how to append things to lists in Ans
 The original blog post can be found at:
 [https://blog.crisp.se/2016/10/20/maxwenzin/how-to-append-to-lists-in-ansible](https://blog.crisp.se/2016/10/20/maxwenzin/how-to-append-to-lists-in-ansible)
 
+The examples make use of the builtin [set_fact module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/set_fact_module.html).
+
 ## How to run demonstration
 `ansible-playbook demo-append-list.yml`
+
+or (if the file is made executable)
+
+`./demo-append-list.yml`
 
 ## Example output
 ```shell
@@ -210,4 +216,4 @@ localhost                  : ok=31   changed=0    unreachable=0    failed=0    s
 ## Ansible version
 
 Demo built with Ansible version 2.6.5
-Tested up to version 2.8.1
+Tested up to version 2.9.9
