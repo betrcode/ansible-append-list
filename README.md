@@ -216,4 +216,4 @@ localhost                  : ok=31   changed=0    unreachable=0    failed=0    s
 ## Ansible version
 
 Demo built with Ansible version 2.6.5
-Tested up to version 2.9.9
+Tested up to version 2.10.8
